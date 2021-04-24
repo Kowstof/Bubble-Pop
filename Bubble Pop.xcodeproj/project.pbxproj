@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99CE373E263455570041CBB6 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CE373D263455570041CBB6 /* Game.swift */; };
+		99CE3742263459240041CBB6 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CE3741263459240041CBB6 /* Player.swift */; };
+		99CE3745263459340041CBB6 /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CE3744263459340041CBB6 /* Bubble.swift */; };
 		99F5051526340EE800D7E159 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F5051426340EE800D7E159 /* AppDelegate.swift */; };
 		99F5051726340EE800D7E159 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F5051626340EE800D7E159 /* SceneDelegate.swift */; };
 		99F5051926340EE800D7E159 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F5051826340EE800D7E159 /* ViewController.swift */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		99CE373D263455570041CBB6 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		99CE3741263459240041CBB6 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		99CE3744263459340041CBB6 /* Bubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bubble.swift; sourceTree = "<group>"; };
 		99F5051126340EE800D7E159 /* Bubble Pop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bubble Pop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99F5051426340EE800D7E159 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99F5051626340EE800D7E159 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +43,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		99CE37392634542B0041CBB6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				99CE373D263455570041CBB6 /* Game.swift */,
+				99CE3741263459240041CBB6 /* Player.swift */,
+				99CE3744263459340041CBB6 /* Bubble.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		99CE373A263454340041CBB6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				99F5051F26340EE900D7E159 /* LaunchScreen.storyboard */,
+				99F5051A26340EE800D7E159 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		99CE373B2634543A0041CBB6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				99F5051826340EE800D7E159 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		99F5050826340EE800D7E159 = {
 			isa = PBXGroup;
 			children = (
@@ -56,12 +89,12 @@
 		99F5051326340EE800D7E159 /* Bubble Pop */ = {
 			isa = PBXGroup;
 			children = (
+				99CE373B2634543A0041CBB6 /* Controllers */,
+				99CE373A263454340041CBB6 /* Views */,
+				99CE37392634542B0041CBB6 /* Models */,
 				99F5051426340EE800D7E159 /* AppDelegate.swift */,
 				99F5051626340EE800D7E159 /* SceneDelegate.swift */,
-				99F5051826340EE800D7E159 /* ViewController.swift */,
-				99F5051A26340EE800D7E159 /* Main.storyboard */,
 				99F5051D26340EE900D7E159 /* Assets.xcassets */,
-				99F5051F26340EE900D7E159 /* LaunchScreen.storyboard */,
 				99F5052226340EE900D7E159 /* Info.plist */,
 			);
 			path = "Bubble Pop";
@@ -138,8 +171,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				99F5051926340EE800D7E159 /* ViewController.swift in Sources */,
+				99CE3745263459340041CBB6 /* Bubble.swift in Sources */,
 				99F5051526340EE800D7E159 /* AppDelegate.swift in Sources */,
 				99F5051726340EE800D7E159 /* SceneDelegate.swift in Sources */,
+				99CE3742263459240041CBB6 /* Player.swift in Sources */,
+				99CE373E263455570041CBB6 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

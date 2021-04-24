@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		99CE373E263455570041CBB6 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CE373D263455570041CBB6 /* Game.swift */; };
-		99CE3742263459240041CBB6 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CE3741263459240041CBB6 /* Player.swift */; };
-		99CE3745263459340041CBB6 /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CE3744263459340041CBB6 /* Bubble.swift */; };
+		99CE373E263455570041CBB6 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CE373D263455570041CBB6 /* Main.swift */; };
 		99F5051526340EE800D7E159 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F5051426340EE800D7E159 /* AppDelegate.swift */; };
 		99F5051726340EE800D7E159 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F5051626340EE800D7E159 /* SceneDelegate.swift */; };
 		99F5051926340EE800D7E159 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F5051826340EE800D7E159 /* ViewController.swift */; };
@@ -19,9 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		99CE373D263455570041CBB6 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		99CE3741263459240041CBB6 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
-		99CE3744263459340041CBB6 /* Bubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bubble.swift; sourceTree = "<group>"; };
+		99CE373D263455570041CBB6 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		99F5051126340EE800D7E159 /* Bubble Pop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bubble Pop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99F5051426340EE800D7E159 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99F5051626340EE800D7E159 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,9 +42,7 @@
 		99CE37392634542B0041CBB6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				99CE373D263455570041CBB6 /* Game.swift */,
-				99CE3741263459240041CBB6 /* Player.swift */,
-				99CE3744263459340041CBB6 /* Bubble.swift */,
+				99CE373D263455570041CBB6 /* Main.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -171,11 +165,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				99F5051926340EE800D7E159 /* ViewController.swift in Sources */,
-				99CE3745263459340041CBB6 /* Bubble.swift in Sources */,
 				99F5051526340EE800D7E159 /* AppDelegate.swift in Sources */,
 				99F5051726340EE800D7E159 /* SceneDelegate.swift in Sources */,
-				99CE3742263459240041CBB6 /* Player.swift in Sources */,
-				99CE373E263455570041CBB6 /* Game.swift in Sources */,
+				99CE373E263455570041CBB6 /* Main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

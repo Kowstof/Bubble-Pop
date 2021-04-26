@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bubble Pop!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkn-dX-fzT">
-                                <rect key="frame" x="47.666666666666657" y="185.66666666666666" width="294.66666666666674" height="81.333333333333343"/>
+                                <rect key="frame" x="56.666666666666657" y="203.66666666666666" width="277" height="63.333333333333343"/>
                                 <fontDescription key="fontDescription" name="CarterOne" family="Carter One" pointSize="50"/>
                                 <color key="textColor" red="0.55686274509803924" green="0.26666666666666666" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -41,7 +41,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Hgp-JT-4oO" kind="show" id="nLE-Lk-XZS"/>
+                                    <segue destination="Hgp-JT-4oO" kind="show" identifier="goToSetup" id="nLE-Lk-XZS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xiK-Lm-3IZ">
@@ -56,7 +56,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="TiR-qY-SLr" kind="presentation" id="EtI-kt-Puw"/>
+                                    <segue destination="TiR-qY-SLr" kind="presentation" identifier="goToLeaderBoard" id="EtI-kt-Puw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -81,7 +81,6 @@
         <!--Table View Controller-->
         <scene sceneID="B3w-LX-IQq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="40c-c3-28h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="TiR-qY-SLr" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="VUz-VP-j0H">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
@@ -120,13 +119,14 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="7gG-G7-YPv"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="40c-c3-28h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2615" y="236"/>
         </scene>
         <!--Game Setup-->
         <scene sceneID="fha-00-IZ1">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Hgp-JT-4oO" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Hgp-JT-4oO" customClass="GameSetupViewController" customModule="Bubble_Pop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nnb-3p-Ctn">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,21 +135,27 @@
                                 <rect key="frame" x="62" y="175" width="266" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="nameFieldChanged:" destination="Hgp-JT-4oO" eventType="editingChanged" id="Pe2-MG-mgX"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGg-7l-dKd">
-                                <rect key="frame" x="165.33333333333334" y="137.66666666666666" width="59.666666666666657" height="25.333333333333343"/>
+                                <rect key="frame" x="165" y="137.66666666666666" width="60" height="25.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Duration (seconds)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ihp-iP-1Md">
-                                <rect key="frame" x="23" y="332" width="241" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ihp-iP-1Md">
+                                <rect key="frame" x="23" y="332" width="141" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="60" minValue="5" maxValue="120" translatesAutoresizingMaskIntoConstraints="NO" id="Mpw-CH-GxD">
                                 <rect key="frame" x="21" y="364" width="348" height="31"/>
+                                <connections>
+                                    <action selector="durationSliderValueChanged:" destination="Hgp-JT-4oO" eventType="valueChanged" id="ImS-aL-Ccc"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max Bubbles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3Q-70-dTY">
                                 <rect key="frame" x="23" y="480" width="121" height="24"/>
@@ -162,6 +168,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="hwG-OW-dDZ"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="maxBubblesSliderChanged:" destination="Hgp-JT-4oO" eventType="valueChanged" id="iVb-Zq-IzV"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8S-mY-T1h">
                                 <rect key="frame" x="184.66666666666666" y="402" width="21" height="21"/>
@@ -180,7 +189,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Start!"/>
                                 <connections>
-                                    <segue destination="yqL-ag-qkh" kind="show" id="kXS-OJ-4vS"/>
+                                    <segue destination="yqL-ag-qkh" kind="show" identifier="goToGame" id="kXS-OJ-4vS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -215,6 +224,14 @@
                     </view>
                     <navigationItem key="navigationItem" title="Game Setup" id="t8u-nO-af3"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="durationLabel" destination="a8S-mY-T1h" id="Ick-dg-NfU"/>
+                        <outlet property="durationSlider" destination="Mpw-CH-GxD" id="ZwA-Ji-Agz"/>
+                        <outlet property="maxBubbleSlider" destination="bnp-Pg-FCd" id="elO-gm-Uvb"/>
+                        <outlet property="maxBubblesLabel" destination="dhU-JF-onL" id="l48-xX-pd1"/>
+                        <outlet property="nameField" destination="f9C-dk-XlG" id="Sy3-Sl-6Ov"/>
+                        <outlet property="startButton" destination="Ci1-ag-cz8" id="oDK-Jy-60a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XcX-q6-tdb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -238,19 +255,39 @@
             </objects>
             <point key="canvasLocation" x="1686.1538461538462" y="-574.4075829383886"/>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="jtW-cs-pQw">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="yqL-ag-qkh" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="yqL-ag-qkh" customClass="GameViewController" customModule="Bubble_Pop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JPB-Z0-9I8">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWB-F1-IU0">
+                                <rect key="frame" x="72" y="146" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oqk-ph-zez">
+                                <rect key="frame" x="262" y="145" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="D2d-8i-zcs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Q2M-bQ-qO4">
                         <barButtonItem key="backBarButtonItem" title="Stop Playing" id="x7m-nl-7tA"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="countDownLabel" destination="Oqk-ph-zez" id="YGk-Vx-OO2"/>
+                        <outlet property="playerNameLabel" destination="WWB-F1-IU0" id="mit-hx-JG5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PkW-BM-ne8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

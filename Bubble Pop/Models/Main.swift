@@ -29,7 +29,7 @@ struct Player {
 
 }
 
-struct Bubble {
+struct Bubblee {
     let colour: String
     
     init(colour: String) {

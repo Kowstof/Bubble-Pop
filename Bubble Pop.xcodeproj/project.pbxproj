@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99711894263639A20032BC47 /* CarterOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 99711893263639A20032BC47 /* CarterOne-Regular.ttf */; };
 		99CE373E263455570041CBB6 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CE373D263455570041CBB6 /* Main.swift */; };
 		99F5051526340EE800D7E159 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F5051426340EE800D7E159 /* AppDelegate.swift */; };
 		99F5051726340EE800D7E159 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F5051626340EE800D7E159 /* SceneDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		99711893263639A20032BC47 /* CarterOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "CarterOne-Regular.ttf"; path = "../../../../Downloads/Carter_One/CarterOne-Regular.ttf"; sourceTree = "<group>"; };
 		99CE373D263455570041CBB6 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		99F5051126340EE800D7E159 /* Bubble Pop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bubble Pop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99F5051426340EE800D7E159 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		99711892263639910032BC47 /* font */ = {
+			isa = PBXGroup;
+			children = (
+				99711893263639A20032BC47 /* CarterOne-Regular.ttf */,
+			);
+			path = font;
+			sourceTree = "<group>";
+		};
 		99CE37392634542B0041CBB6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +97,7 @@
 				99CE373A263454340041CBB6 /* Views */,
 				99CE37392634542B0041CBB6 /* Models */,
 				99F5051426340EE800D7E159 /* AppDelegate.swift */,
+				99711892263639910032BC47 /* font */,
 				99F5051626340EE800D7E159 /* SceneDelegate.swift */,
 				99F5051D26340EE900D7E159 /* Assets.xcassets */,
 				99F5052226340EE900D7E159 /* Info.plist */,
@@ -154,6 +165,7 @@
 				99F5052126340EE900D7E159 /* LaunchScreen.storyboard in Resources */,
 				99F5051E26340EE900D7E159 /* Assets.xcassets in Resources */,
 				99F5051C26340EE800D7E159 /* Main.storyboard in Resources */,
+				99711894263639A20032BC47 /* CarterOne-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

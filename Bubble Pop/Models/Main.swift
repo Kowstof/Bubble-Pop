@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Player {
+struct Player {
     let name: String
     var highScore: Int = 0
     
@@ -15,21 +15,21 @@ class Player {
         self.name = name
     }
     
-    func getName() -> String {
-        return name
-    }
+//    func getName() -> String {
+//        return name
+//    }
+//
+//    func getHighScore() -> Int {
+//        return highScore
+//    }
     
-    func getHighScore() -> Int {
-        return highScore
-    }
-    
-    func setHighScore(newHighScore: Int) {
+    mutating func setHighScore(newHighScore: Int) {
         highScore = newHighScore
     }
 
 }
 
-class Bubble {
+struct Bubble {
     let colour: String
     
     init(colour: String) {
@@ -37,25 +37,39 @@ class Bubble {
     }
 }
 
-class Game {
+struct Game {
     var gameDuration: Int = 60
     var maxBubbles: Int = 15
+    var score: Int = 0
+    let player: Player
     
-    func getGameDuration() -> Int {
-        return gameDuration
+//    func getGameDuration() -> Int {
+//        return gameDuration
+//    }
+//
+//    func getMaxBubbles() -> Int {
+//        return maxBubbles
+//    }
+    
+    init(player: Player) {
+        self.player = player
     }
     
-    func getMaxBubbles() -> Int {
-        return maxBubbles
-    }
-    
-    func setgameDuration(newDuration: Int) {
+    mutating func setgameDuration(newDuration: Int) {
         gameDuration = newDuration
     }
     
-    func setMaxBubbles(newMaxBubbles: Int) {
+    mutating func setMaxBubbles(newMaxBubbles: Int) {
         maxBubbles = newMaxBubbles
     }
+    
+    mutating func addToScore(amount: Int) {
+        score += amount
+    }
+}
+
+struct Leaderboard {
+    var players = [Player]()
 }
 
 enum colours {

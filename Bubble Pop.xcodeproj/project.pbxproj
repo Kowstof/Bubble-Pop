@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		99711894263639A20032BC47 /* CarterOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 99711893263639A20032BC47 /* CarterOne-Regular.ttf */; };
+		99711897263649CC0032BC47 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99711896263649CC0032BC47 /* SetupViewController.swift */; };
 		99CE373E263455570041CBB6 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CE373D263455570041CBB6 /* Main.swift */; };
 		99F5051526340EE800D7E159 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F5051426340EE800D7E159 /* AppDelegate.swift */; };
 		99F5051726340EE800D7E159 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F5051626340EE800D7E159 /* SceneDelegate.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		99711893263639A20032BC47 /* CarterOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "CarterOne-Regular.ttf"; path = "../../../../Downloads/Carter_One/CarterOne-Regular.ttf"; sourceTree = "<group>"; };
+		99711896263649CC0032BC47 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		99CE373D263455570041CBB6 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		99F5051126340EE800D7E159 /* Bubble Pop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bubble Pop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99F5051426340EE800D7E159 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		99F5050826340EE800D7E159 = {
 			isa = PBXGroup;
 			children = (
+				99711896263649CC0032BC47 /* SetupViewController.swift */,
 				99F5051326340EE800D7E159 /* Bubble Pop */,
 				99F5051226340EE800D7E159 /* Products */,
 			);
@@ -180,6 +183,7 @@
 				99F5051526340EE800D7E159 /* AppDelegate.swift in Sources */,
 				99F5051726340EE800D7E159 /* SceneDelegate.swift in Sources */,
 				99CE373E263455570041CBB6 /* Main.swift in Sources */,
+				99711897263649CC0032BC47 /* SetupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

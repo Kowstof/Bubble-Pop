@@ -11,12 +11,15 @@ class GameViewController: UIViewController {
     @IBOutlet weak var playerNameLabel: UILabel!
     @IBOutlet weak var countDownLabel: UILabel!
     
-    @IBAction func bubbleTouched(_ sender: UIButton) {
+    @IBAction func bubbleTouched(_ sender: Bubble) {
+        score += sender.pointValue
+        updateScore()
         sender.removeFromSuperview()
     }
     
     var name = "Blank"
     var timeRemaining = 60
+    var score = 0
     var timer = Timer()
 
     override func viewDidLoad() {
@@ -29,6 +32,10 @@ class GameViewController: UIViewController {
             self.countingDown()
             self.generateBubble()
         }
+    }
+    
+    func updateScore() {
+        
     }
     
     @objc func countingDown() {

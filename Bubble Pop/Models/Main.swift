@@ -29,13 +29,6 @@ struct Player {
 
 }
 
-struct Bubblee {
-    let colour: String
-    
-    init(colour: String) {
-        self.colour = colour
-    }
-}
 
 struct Game {
     var gameDuration: Int = 60
@@ -72,6 +65,4 @@ struct Leaderboard {
     var players = [Player]()
 }
 
-enum colours {
-    case red, pink, green, blue, black
-}
+

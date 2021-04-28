@@ -25,6 +25,8 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap) //Dismiss keyboard when anywhere on the screen tapped. Credit: https://stackoverflow.com/a/27079103
         playerNameLabel.text = name
         countDownLabel.text = String(timeRemaining)
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) {
@@ -53,5 +55,8 @@ class GameViewController: UIViewController {
         self.view.addSubview(bubble)
     }
     
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
     
 }

@@ -19,6 +19,9 @@ class GameSetupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
         startButton.isEnabled = false
         durationSlider.setValue(60, animated: false)
         maxBubbleSlider.setValue(15, animated: false)
@@ -66,4 +69,10 @@ class GameSetupViewController: UIViewController {
             vc.timeRemaining = Int(durationSlider.value)
         }
     }
-}
+    
+    @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }}
+
+

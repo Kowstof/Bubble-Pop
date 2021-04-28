@@ -8,7 +8,6 @@
 import UIKit
 
 class GameViewController: UIViewController {
-    @IBOutlet weak var playerNameLabel: UILabel!
     @IBOutlet weak var countDownLabel: UILabel!
     
     @IBAction func bubbleTouched(_ sender: Bubble) {

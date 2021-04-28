@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreGraphics
 
 class Bubble: UIButton {
     
@@ -17,8 +18,8 @@ class Bubble: UIButton {
         let screenSize = UIScreen.main.bounds
         let screenWidth = screenSize.width
         let screenHeight = screenSize.height
-        self.xPos = Int.random(in: 30...Int(screenWidth) - 30)
-        self.yPos = Int.random(in: 100...Int(screenHeight) - 100)
+        self.xPos = Int.random(in: 10...Int(screenWidth) - 80)
+        self.yPos = Int.random(in: 140...Int(screenHeight) - 180)
         
         super.init(frame: frame)
         
@@ -59,7 +60,6 @@ class Bubble: UIButton {
             return UIColor.BubbleColours.red
         }
     }
-    
 }
 
 // Credit for custom colour extension implementation: https://stackoverflow.com/a/40743337

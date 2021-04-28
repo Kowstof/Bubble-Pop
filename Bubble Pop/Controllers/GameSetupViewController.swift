@@ -67,6 +67,7 @@ class GameSetupViewController: UIViewController {
             let vc = segue.destination as! GameViewController
             vc.name = nameField.text!
             vc.timeRemaining = Int(durationSlider.value)
+            vc.maxBubbles = Int(maxBubbleSlider.value)
         }
     }
     

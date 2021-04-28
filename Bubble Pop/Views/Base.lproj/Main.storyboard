@@ -325,6 +325,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="countDownLabel" destination="Oqk-ph-zez" id="YGk-Vx-OO2"/>
+                        <outlet property="highScoreText" destination="WtZ-ei-rC9" id="umK-23-lur"/>
+                        <outlet property="scoreText" destination="1IZ-3h-dEM" id="3T3-GZ-bz7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PkW-BM-ne8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

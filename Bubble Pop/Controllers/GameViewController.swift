@@ -8,7 +8,6 @@
 import UIKit
 
 class GameViewController: UIViewController {
-    @IBOutlet weak var playerNameLabel: UILabel!
     @IBOutlet weak var countDownLabel: UILabel!
     
     @IBAction func bubbleTouched(_ sender: Bubble) {
@@ -25,7 +24,6 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        playerNameLabel.text = name
         countDownLabel.text = String(timeRemaining)
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) {
             timer in

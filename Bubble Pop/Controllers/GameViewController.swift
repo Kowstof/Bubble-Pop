@@ -21,13 +21,24 @@ class GameViewController: UIViewController {
     var highScore = 0
     var maxBubbles = 0
     var bubbleCollection: [Bubble] = []
+    var playerScores: [[String]] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        initHighScore()
         // Do any additional setup after loading the view.
         initialBubbleSpawn()
         startTimer()
         updateScore()
+    }
+    
+    func initHighScore() {
+       // var scores: [Int?] = []
+
+        if let playerData = UserDefaults.standard.value(forKey: "playerScores") as? [[String]] {
+            print(playerData)
+            self.playerScores = playerData
+        }
     }
     
     func updateScore() {
@@ -52,6 +63,7 @@ class GameViewController: UIViewController {
             
             if self.timeRemaining == 0 {
                 timer.invalidate()
+                self.saveScore()
             }
         }
     }
@@ -131,5 +143,11 @@ class GameViewController: UIViewController {
         score += sender.pointValue
         updateScore()
         removeBubble(bubble: sender)
+    }
+    
+    func saveScore() {
+        let newScore: [String] = [name, String(score)]
+        playerScores.append(newScore)
+        UserDefaults.standard.set(playerScores, forKey: "playerScores")
     }
 }

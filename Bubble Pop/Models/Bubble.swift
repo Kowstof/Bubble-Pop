@@ -19,7 +19,7 @@ class Bubble: UIButton {
         let screenWidth = screenSize.width
         let screenHeight = screenSize.height
         self.xPos = Int.random(in: 10...Int(screenWidth) - 80)
-        self.yPos = Int.random(in: 140...Int(screenHeight) - 180)
+        self.yPos = Int.random(in: 160...Int(screenHeight) - 180)
         
         super.init(frame: frame)
         

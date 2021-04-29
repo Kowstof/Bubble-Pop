@@ -9,7 +9,7 @@ import UIKit
 import CoreGraphics
 
 class GameViewController: UIViewController {
-
+    
     @IBOutlet weak var countDownLabel: UILabel!
     @IBOutlet weak var scoreText: UILabel!
     @IBOutlet weak var highScoreText: UILabel!
@@ -22,28 +22,37 @@ class GameViewController: UIViewController {
     var maxBubbles = 0
     var bubbleCollection: [Bubble] = []
     var playerScores: [[String]] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        initHighScore()
         // Do any additional setup after loading the view.
+        initHighScore()
         initialBubbleSpawn()
         startTimer()
         updateScore()
     }
     
     func initHighScore() {
-       // var scores: [Int?] = []
-
+        var scores: [Int] = []
+        var highscore = 0
+        
         if let playerData = UserDefaults.standard.value(forKey: "playerScores") as? [[String]] {
             print(playerData)
             self.playerScores = playerData
         }
+        
+        for player in playerScores {
+            let score = Int(player[1])
+            scores.append(score!)
+        }
+    
+            highscore = scores.max()!
+            highScore = highscore
     }
     
     func updateScore() {
         scoreText.text = String(score)
-        highScoreText.text = "0"
+        highScoreText.text = String(highScore)
         
         if score > highScore {
             highScore = score
@@ -58,12 +67,13 @@ class GameViewController: UIViewController {
             self.timeRemaining -= 1
             self.countDownLabel.text = String(self.timeRemaining)
             self.spawnBubbles()
-
+            
             self.despawnBubbles()
             
             if self.timeRemaining == 0 {
                 timer.invalidate()
                 self.saveScore()
+                self.performSegue(withIdentifier: "goToLb", sender: nil)
             }
         }
     }
@@ -113,7 +123,6 @@ class GameViewController: UIViewController {
                     bubblesMade += 1
                 }
             }
-            
         }
     }
     
@@ -127,7 +136,7 @@ class GameViewController: UIViewController {
             maxBubblesToRemove = 3
         }
         
-        for _ in 1...maxBubblesToRemove {
+        for _ in 0...maxBubblesToRemove {
             let bubbleToRemove = bubbleCollection[Int.random(in: 0...bubbleCollection.count - 1)]
             removeBubble(bubble: bubbleToRemove)
         }

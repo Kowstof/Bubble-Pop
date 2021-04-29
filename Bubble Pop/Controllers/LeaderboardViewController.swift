@@ -46,4 +46,8 @@ class LeaderboardViewController: UITableViewController {
         return "Leaderboard"
     }
     
+    override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
+        <#code#>
+    }
+    
 }

@@ -11,6 +11,7 @@
 		9971189C2636630D0032BC47 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9971189B2636630D0032BC47 /* GameViewController.swift */; };
 		997118A426366A690032BC47 /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997118A326366A690032BC47 /* Bubble.swift */; };
 		99A064FC26379D4D00572167 /* CarterOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 99A064FB26379D4D00572167 /* CarterOne-Regular.ttf */; };
+		99A66EC8263A7319000FD297 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A66EC7263A7319000FD297 /* LeaderboardViewController.swift */; };
 		99CE373E263455570041CBB6 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CE373D263455570041CBB6 /* Main.swift */; };
 		99F5051526340EE800D7E159 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F5051426340EE800D7E159 /* AppDelegate.swift */; };
 		99F5051726340EE800D7E159 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F5051626340EE800D7E159 /* SceneDelegate.swift */; };
@@ -25,6 +26,7 @@
 		9971189B2636630D0032BC47 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		997118A326366A690032BC47 /* Bubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bubble.swift; sourceTree = "<group>"; };
 		99A064FB26379D4D00572167 /* CarterOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CarterOne-Regular.ttf"; sourceTree = "<group>"; };
+		99A66EC7263A7319000FD297 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		99CE373D263455570041CBB6 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		99F5051126340EE800D7E159 /* Bubble Pop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bubble Pop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99F5051426340EE800D7E159 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				99711896263649CC0032BC47 /* GameSetupViewController.swift */,
 				99F5051826340EE800D7E159 /* ViewController.swift */,
 				9971189B2636630D0032BC47 /* GameViewController.swift */,
+				99A66EC7263A7319000FD297 /* LeaderboardViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				99F5051726340EE800D7E159 /* SceneDelegate.swift in Sources */,
 				99CE373E263455570041CBB6 /* Main.swift in Sources */,
 				9971189C2636630D0032BC47 /* GameViewController.swift in Sources */,
+				99A66EC8263A7319000FD297 /* LeaderboardViewController.swift in Sources */,
 				99711897263649CC0032BC47 /* GameSetupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

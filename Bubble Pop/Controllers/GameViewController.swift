@@ -25,10 +25,9 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        initialBubbleSpawn()
         startTimer()
         updateScore()
-        print(maxBubbles)
-        
     }
     
     func updateScore() {
@@ -47,7 +46,9 @@ class GameViewController: UIViewController {
             //self.countDown()
             self.timeRemaining -= 1
             self.countDownLabel.text = String(self.timeRemaining)
-            self.generateBubbles()
+            self.spawnBubbles()
+
+            self.despawnBubbles()
             
             if self.timeRemaining == 0 {
                 timer.invalidate()
@@ -55,19 +56,37 @@ class GameViewController: UIViewController {
         }
     }
     
-//    @objc func countDown() {
-//
-//    }
+    @discardableResult func tryMakeBubble() -> Bool {
+        var touching = false
+        let newBubble = Bubble()
+        
+        for bubble in bubbleCollection {
+            if newBubble.frame.intersects(bubble.frame) {
+                touching = true
+            }
+        }
+        
+        if !touching {
+            newBubble.addTarget(self, action: #selector(bubbleTouched), for: .touchUpInside)
+            self.view.addSubview(newBubble)
+            bubbleCollection.append(newBubble)
+            return true
+        } else {
+            return false
+        }
+    }
     
-    @objc func makeBubble(bubble: Bubble) {
-        bubble.addTarget(self, action: #selector(bubbleTouched), for: .touchUpInside)
-        self.view.addSubview(bubble)
-        bubbleCollection.append(bubble)    }
+    func initialBubbleSpawn() {
+        while bubbleCollection.count < maxBubbles {
+            tryMakeBubble()
+        }
+    }
     
-    // randomly adds between 1 and 3 new bubbles. Checks to make sure it doesn't exceed the specified max bubble limit. Also checks for intersects before creating the new bubble
-    @objc func generateBubbles() {
+    // randomly adds between 1 and 5 new bubbles. Checks to make sure it doesn't exceed the specified max bubble limit.
+    @objc func spawnBubbles() {
         let difference = maxBubbles - bubbleCollection.count
         var maxNewBubbles: Int
+        var bubblesMade = 0
         
         if difference < 4 {
             maxNewBubbles = difference + 1
@@ -75,32 +94,42 @@ class GameViewController: UIViewController {
             maxNewBubbles = 5
         }
         
-        if bubbleCollection.isEmpty {
-            let firstBubble = Bubble()
-            makeBubble(bubble: firstBubble)
-        }
-        
-        for _ in 1...maxNewBubbles {
-            var touching = false
-            let newBubble = Bubble()
-            for bubble in bubbleCollection {
-                if newBubble.frame.intersects(bubble.frame) {
-                    touching = true
+        for num in 0...maxNewBubbles {
+            while bubblesMade < num { // if a bubble overlaps, it's not made. this will keep trying until the required number is met
+                let success = tryMakeBubble()
+                if success {
+                    bubblesMade += 1
                 }
             }
             
-            if !touching {
-                makeBubble(bubble: newBubble)
-            }
         }
+    }
+    
+    //removes between 1 and 3 bubbles using a random index from the view. It also checks to make sure it's not removing more bubbles than there are on the screen
+    @objc func despawnBubbles() {
+        var maxBubblesToRemove: Int
+        
+        if bubbleCollection.count < 3 {
+            maxBubblesToRemove = bubbleCollection.count
+        } else {
+            maxBubblesToRemove = 3
+        }
+        
+        for _ in 1...maxBubblesToRemove {
+            let bubbleToRemove = bubbleCollection[Int.random(in: 0...bubbleCollection.count - 1)]
+            removeBubble(bubble: bubbleToRemove)
+        }
+    }
+    
+    func removeBubble(bubble: Bubble) {
+        let index = bubbleCollection.firstIndex(of: bubble)
+        bubbleCollection.remove(at: index!)
+        bubble.removeFromSuperview()
     }
     
     @IBAction func bubbleTouched(_ sender: Bubble) {
         score += sender.pointValue
         updateScore()
-        sender.removeFromSuperview()
-        let index = bubbleCollection.firstIndex(of: sender)
-        bubbleCollection.remove(at: index!)
-        //REMOVE FROM ARRAY
+        removeBubble(bubble: sender)
     }
 }

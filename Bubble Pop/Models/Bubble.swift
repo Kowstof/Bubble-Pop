@@ -28,6 +28,7 @@ class Bubble: UIButton {
         self.layer.cornerRadius = 0.5 * self.bounds.size.width
         self.layer.borderWidth = 5
         self.layer.borderColor = UIColor.black.cgColor
+        self.setTitle(String(pointValue), for: .normal)
     }
     
     required init?(coder: NSCoder) {

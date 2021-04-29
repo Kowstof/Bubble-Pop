@@ -26,6 +26,8 @@ class Bubble: UIButton {
         self.backgroundColor = setColour()
         self.frame = CGRect(x: xPos, y: yPos, width: 70, height: 70)
         self.layer.cornerRadius = 0.5 * self.bounds.size.width
+        self.layer.borderWidth = 5
+        self.layer.borderColor = UIColor.black.cgColor
     }
     
     required init?(coder: NSCoder) {

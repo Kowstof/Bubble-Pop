@@ -20,7 +20,6 @@ class GameViewController: UIViewController {
     var timer = Timer()
     var highScore = 0
     var maxBubbles = 0
-    var bubblesOnScreen = 0
     var bubbleCollection: [Bubble] = []
 
     override func viewDidLoad() {
@@ -34,6 +33,7 @@ class GameViewController: UIViewController {
     
     func updateScore() {
         scoreText.text = String(score)
+        highScoreText.text = "0"
         
         if score > highScore {
             highScore = score
@@ -44,48 +44,53 @@ class GameViewController: UIViewController {
     @objc func startTimer() {
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) {
             timer in
-            self.countDown()
+            //self.countDown()
+            self.timeRemaining -= 1
+            self.countDownLabel.text = String(self.timeRemaining)
             self.generateBubbles()
+            
+            if self.timeRemaining == 0 {
+                timer.invalidate()
+            }
         }
     }
     
-    @objc func countDown() {
-        timeRemaining -= 1
-        countDownLabel.text = String(timeRemaining)
-        
-        if timeRemaining == 0 {
-            timer.invalidate()
-        }
-    }
+//    @objc func countDown() {
+//
+//    }
     
+    @objc func makeBubble(bubble: Bubble) {
+        bubble.addTarget(self, action: #selector(bubbleTouched), for: .touchUpInside)
+        self.view.addSubview(bubble)
+        bubbleCollection.append(bubble)    }
+    
+    // randomly adds between 1 and 3 new bubbles. Checks to make sure it doesn't exceed the specified max bubble limit. Also checks for intersects before creating the new bubble
     @objc func generateBubbles() {
-        let difference = maxBubbles - bubblesOnScreen
+        let difference = maxBubbles - bubbleCollection.count
         var maxNewBubbles: Int
         
-        switch difference {
-        case 0:
-            maxNewBubbles = 0
-        case 1:
-            maxNewBubbles = 1
-        case 2:
-            maxNewBubbles = 2
-        default:
-            maxNewBubbles = Int.random(in: 1...3)
+        if difference < 4 {
+            maxNewBubbles = difference + 1
+        } else {
+            maxNewBubbles = 5
         }
         
-                
-        if maxNewBubbles > 0 {
-            for _ in 1...maxNewBubbles {
-                let bubble = Bubble()
-                
-                for bubble2 in bubbleCollection {
-                    //let touching = 
-                    //if bubble2
+        if bubbleCollection.isEmpty {
+            let firstBubble = Bubble()
+            makeBubble(bubble: firstBubble)
+        }
+        
+        for _ in 1...maxNewBubbles {
+            var touching = false
+            let newBubble = Bubble()
+            for bubble in bubbleCollection {
+                if newBubble.frame.intersects(bubble.frame) {
+                    touching = true
                 }
-                
-                bubble.addTarget(self, action: #selector(bubbleTouched), for: .touchUpInside)
-                self.view.addSubview(bubble)
-                bubblesOnScreen += 1
+            }
+            
+            if !touching {
+                makeBubble(bubble: newBubble)
             }
         }
     }
@@ -94,6 +99,8 @@ class GameViewController: UIViewController {
         score += sender.pointValue
         updateScore()
         sender.removeFromSuperview()
-        bubblesOnScreen -= 1
+        let index = bubbleCollection.firstIndex(of: sender)
+        bubbleCollection.remove(at: index!)
+        //REMOVE FROM ARRAY
     }
 }

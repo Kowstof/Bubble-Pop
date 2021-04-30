@@ -32,7 +32,6 @@ class LeaderboardViewController: UITableViewController {
         return playerScores.count
     }
     
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "leaderboardCell", for: indexPath)
         

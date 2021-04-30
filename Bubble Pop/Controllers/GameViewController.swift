@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import CoreGraphics
 
 class GameViewController: UIViewController {
     
@@ -45,9 +44,9 @@ class GameViewController: UIViewController {
             let score = Int(player[1])
             scores.append(score!)
         }
-    
+        
         highscore = scores.max() ?? 0
-            highScore = highscore
+        highScore = highscore
     }
     
     func updateScore() {
@@ -168,7 +167,7 @@ class GameViewController: UIViewController {
         UserDefaults.standard.set(playerScores, forKey: "playerScores")
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) { //passes data to the game end screen
         if segue.identifier == "goToEnd" {
             let vc = segue.destination as! EndScreenViewController
             vc.name = name

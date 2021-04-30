@@ -19,16 +19,15 @@ class ViewController: UIViewController {
         playButton.layer.cornerRadius = 5
     }
     
-    override func viewWillAppear(_ animated: Bool) { // Hides the navigation bar. source: https://stackoverflow.com/a/29209623
+    // Hides the navigation bar. source: https://stackoverflow.com/a/29209623
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
-
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
-
-
 }
 

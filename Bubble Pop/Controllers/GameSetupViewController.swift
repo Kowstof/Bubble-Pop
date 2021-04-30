@@ -19,6 +19,8 @@ class GameSetupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        // Tap anywhere on the screen to dismiss keyboard. Source: https://stackoverflow.com/a/27079103
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         
@@ -75,5 +77,3 @@ class GameSetupViewController: UIViewController {
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }}
-
-

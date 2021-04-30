@@ -28,7 +28,7 @@ class EndScreenViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
-
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
@@ -50,7 +50,4 @@ class EndScreenViewController: UIViewController {
         scoreLabel.text = "Score: " + String(score)
         messageLabel.text = determineOutcome()
     }
-    
-    
-
 }

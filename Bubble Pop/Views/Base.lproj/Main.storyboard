@@ -158,16 +158,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B37-c2-9DJ">
-                                <rect key="frame" x="15" y="108" width="360" height="628"/>
+                                <rect key="frame" x="45" y="172" width="300" height="500"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGg-7l-dKd">
-                                        <rect key="frame" x="147.66666666666666" y="4.9999999999999982" width="64.666666666666657" height="25.333333333333329"/>
+                                        <rect key="frame" x="117.66666666666666" y="4.9999999999999982" width="64.666666666666657" height="25.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="21"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="60" minValue="5" maxValue="90" translatesAutoresizingMaskIntoConstraints="NO" id="Mpw-CH-GxD">
-                                        <rect key="frame" x="3" y="380.66666666666669" width="354" height="31"/>
+                                        <rect key="frame" x="3" y="316.66666666666669" width="294" height="31"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="thumbTintColor" red="0.63921568630000003" green="0.36470588240000001" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
@@ -175,13 +175,13 @@
                                         </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max Bubbles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3Q-70-dTY">
-                                        <rect key="frame" x="5" y="237.66666666666669" width="131" height="26"/>
+                                        <rect key="frame" x="5" y="173.66666666666669" width="131" height="26"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="21"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="5" maxValue="15" translatesAutoresizingMaskIntoConstraints="NO" id="bnp-Pg-FCd">
-                                        <rect key="frame" x="3" y="269.66666666666669" width="354" height="30"/>
+                                        <rect key="frame" x="3" y="205.66666666666669" width="294" height="30"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="29" id="hwG-OW-dDZ"/>
@@ -192,19 +192,19 @@
                                         </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8S-mY-T1h">
-                                        <rect key="frame" x="168" y="415.66666666666663" width="24" height="21"/>
+                                        <rect key="frame" x="138" y="351.66666666666663" width="24" height="20.333333333333314"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhU-JF-onL">
-                                        <rect key="frame" x="170" y="303.66666666666669" width="20" height="21"/>
+                                        <rect key="frame" x="140" y="239.66666666666669" width="20" height="21"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ci1-ag-cz8">
-                                        <rect key="frame" x="130" y="573" width="100" height="50"/>
+                                        <rect key="frame" x="100" y="445" width="100" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="MAB-Ij-RNE"/>
@@ -223,7 +223,7 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter player name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f9C-dk-XlG">
-                                        <rect key="frame" x="55" y="40.333333333333343" width="250" height="50"/>
+                                        <rect key="frame" x="25" y="40.333333333333343" width="250" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Enn-C6-t8k"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="zaW-9B-s7J"/>
@@ -234,8 +234,8 @@
                                             <action selector="nameFieldChanged:" destination="Hgp-JT-4oO" eventType="editingChanged" id="Pe2-MG-mgX"/>
                                         </connections>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ihp-iP-1Md">
-                                        <rect key="frame" x="5" y="348.66666666666669" width="152" height="26"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Game Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ihp-iP-1Md">
+                                        <rect key="frame" x="5" y="284.66666666666669" width="152" height="26"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="21"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -246,11 +246,12 @@
                                     <constraint firstItem="uGg-7l-dKd" firstAttribute="top" secondItem="B37-c2-9DJ" secondAttribute="top" constant="5" id="1CX-EB-az4"/>
                                     <constraint firstItem="Ihp-iP-1Md" firstAttribute="top" secondItem="bnp-Pg-FCd" secondAttribute="bottom" constant="50" id="5TY-PO-Smj"/>
                                     <constraint firstItem="dhU-JF-onL" firstAttribute="centerY" secondItem="B37-c2-9DJ" secondAttribute="centerY" id="5uy-6A-Mgp"/>
+                                    <constraint firstAttribute="height" priority="250" constant="500" id="E0f-lv-ZyJ"/>
                                     <constraint firstItem="dhU-JF-onL" firstAttribute="centerX" secondItem="B37-c2-9DJ" secondAttribute="centerX" id="HlL-nO-5Pr"/>
                                     <constraint firstItem="bnp-Pg-FCd" firstAttribute="leading" secondItem="B37-c2-9DJ" secondAttribute="leading" constant="5" id="Hvj-BH-66U"/>
                                     <constraint firstAttribute="bottom" secondItem="Ci1-ag-cz8" secondAttribute="bottom" constant="5" id="InU-7l-RaM"/>
                                     <constraint firstItem="O3Q-70-dTY" firstAttribute="leading" secondItem="B37-c2-9DJ" secondAttribute="leading" constant="5" id="KAA-cS-D6D"/>
-                                    <constraint firstAttribute="width" constant="360" id="M1D-dO-5Wc"/>
+                                    <constraint firstAttribute="width" constant="300" id="M1D-dO-5Wc"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="O3Q-70-dTY" secondAttribute="trailing" constant="20" symbolic="YES" id="RqP-93-qyo"/>
                                     <constraint firstItem="Ci1-ag-cz8" firstAttribute="centerX" secondItem="B37-c2-9DJ" secondAttribute="centerX" id="SnY-DR-rZm"/>
                                     <constraint firstItem="bnp-Pg-FCd" firstAttribute="centerX" secondItem="B37-c2-9DJ" secondAttribute="centerX" id="UEU-J1-JHv"/>
@@ -272,9 +273,8 @@
                         <viewLayoutGuide key="safeArea" id="ViZ-4i-QTL"/>
                         <color key="backgroundColor" red="0.15294117647058825" green="0.68235294117647061" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="B37-c2-9DJ" firstAttribute="centerY" secondItem="Nnb-3p-Ctn" secondAttribute="centerY" id="Kb5-bi-qkq"/>
                             <constraint firstItem="B37-c2-9DJ" firstAttribute="centerX" secondItem="Nnb-3p-Ctn" secondAttribute="centerX" id="PTZ-gF-ej1"/>
-                            <constraint firstItem="B37-c2-9DJ" firstAttribute="centerY" secondItem="Nnb-3p-Ctn" secondAttribute="centerY" id="qyX-LF-VIh"/>
-                            <constraint firstItem="B37-c2-9DJ" firstAttribute="top" secondItem="ViZ-4i-QTL" secondAttribute="top" constant="20" id="qzp-JZ-CFd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Game Setup" id="t8u-nO-af3">

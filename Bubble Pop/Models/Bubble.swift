@@ -18,13 +18,14 @@ class Bubble: UIButton {
         let screenSize = UIScreen.main.bounds
         let screenWidth = screenSize.width
         let screenHeight = screenSize.height
-        self.xPos = Int.random(in: 10...Int(screenWidth) - 80)
-        self.yPos = Int.random(in: 160...Int(screenHeight) - 180)
+        let adaptiveSize = Int(min(screenWidth, screenHeight) / 6) // gets the smallest screen parameter and makes the bubble radius a sixth of that. Helps with loading bubbles that are not too large or big, depending on orientation and device size
+        self.xPos = Int.random(in: 10...Int(screenWidth) - (adaptiveSize + 10))
+        self.yPos = Int.random(in: 160...Int(screenHeight) - (adaptiveSize + 110))
         
         super.init(frame: frame)
         
         self.backgroundColor = setColour()
-        self.frame = CGRect(x: xPos, y: yPos, width: 70, height: 70)
+        self.frame = CGRect(x: xPos, y: yPos, width: adaptiveSize, height: adaptiveSize)
         self.layer.cornerRadius = 0.5 * self.bounds.size.width
         self.layer.borderWidth = 5
         self.layer.borderColor = UIColor.black.cgColor

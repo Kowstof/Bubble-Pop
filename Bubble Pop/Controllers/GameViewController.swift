@@ -22,6 +22,7 @@ class GameViewController: UIViewController {
     var maxBubbles = 0
     var bubbleCollection: [Bubble] = []
     var playerScores: [[String]] = []
+    var previousBubble: Bubble = Bubble()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +47,7 @@ class GameViewController: UIViewController {
             scores.append(score!)
         }
     
-            highscore = scores.max()!
+        highscore = scores.max() ?? 0
             highScore = highscore
     }
     
@@ -55,8 +56,7 @@ class GameViewController: UIViewController {
         highScoreText.text = String(highScore)
         
         if score > highScore {
-            highScore = score
-            highScoreText.text = String(highScore)
+            highScoreText.text = String(score)
         }
     }
     
@@ -73,7 +73,7 @@ class GameViewController: UIViewController {
             if self.timeRemaining == 0 {
                 timer.invalidate()
                 self.saveScore()
-                self.performSegue(withIdentifier: "goToLb", sender: nil)
+                self.performSegue(withIdentifier: "goToEnd", sender: nil)
             }
         }
     }
@@ -149,8 +149,15 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func bubbleTouched(_ sender: Bubble) {
-        score += sender.pointValue
+        
+        if previousBubble.backgroundColor == sender.backgroundColor { // checks if this bubble is the same as the previous
+            score += Int(round(Float(sender.pointValue) * 1.5))
+        } else {
+            score += sender.pointValue
+        }
+        
         updateScore()
+        previousBubble = sender // sets previous bubble to the one currently tapped on
         removeBubble(bubble: sender)
     }
     
@@ -158,5 +165,14 @@ class GameViewController: UIViewController {
         let newScore: [String] = [name, String(score)]
         playerScores.append(newScore)
         UserDefaults.standard.set(playerScores, forKey: "playerScores")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToEnd" {
+            let vc = segue.destination as! EndScreenViewController
+            vc.name = name
+            vc.score = score
+            vc.highscore = highScore
+        }
     }
 }

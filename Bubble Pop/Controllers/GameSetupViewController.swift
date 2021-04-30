@@ -23,6 +23,7 @@ class GameSetupViewController: UIViewController {
         view.addGestureRecognizer(tap)
         
         startButton.isEnabled = false
+        startButton.layer.cornerRadius = 5
         durationSlider.setValue(60, animated: false)
         maxBubbleSlider.setValue(15, animated: false)
         updateSliderAndLabel(slider: durationSlider, label: durationLabel, interval: 5.0, text: " seconds")

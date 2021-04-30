@@ -38,7 +38,6 @@ class GameViewController: UIViewController {
         var highscore = 0
         
         if let playerData = UserDefaults.standard.value(forKey: "playerScores") as? [[String]] {
-            print(playerData)
             self.playerScores = playerData
         }
         

@@ -34,16 +34,23 @@ class EndScreenViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
+    // The function first checks if there is an existing highscore. If there isn't, it lets the user know they've set the first one. Otherwise, there are three messages for when they've matched, beat or not reached the current high score
     func determineOutcome() -> String {
-        if score < highscore {
-            return "Good try, " + name + "! You were " + String(highscore - score + 1) + " points away from beating the highscore!"
+        
+        if highscore == 0 {
+            return "Great work, " + name + "! You've set the first highscore!"
+        } else {
+            if score < highscore {
+                return "Good try, " + name + "! You were " + String(highscore - score + 1) + " points away from beating the highscore!"
+            }
+            else if score > highscore {
+                return "Amazing, " + name + "! You beat the previous highscore by " + String(score - highscore) + " points!"
+            }
+            else {
+                return "Wow, " + name + "! Looks like a tie. One more point and you would have been the champion!"
+            }
         }
-        else if score > highscore {
-            return "Amazing, " + name + "! You beat the previous highscore by " + String(score - highscore) + " points!"
-        }
-        else {
-            return "Wow, " + name + "! Looks like a tie. One more point and you would have been the champion!"
-        }
+        
     }
     
     func setLabels() {

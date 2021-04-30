@@ -451,7 +451,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THis will have the liong mesage that may ot may not span multiple lines wo yay thaty a;slodkfhjdfg" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEn-oy-1Ji">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THis will have the liong mesage that may ot may not span multiple lines wo yay thaty a;slodkfhjdfg" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEn-oy-1Ji">
                                         <rect key="frame" x="5" y="126" width="340" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="sVO-QW-0ZT"/>

@@ -11,8 +11,8 @@ class EndScreenViewController: UIViewController {
     
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var menuButton: UIButton!
     
-
     var name = ""
     var score = 0
     var highscore = 0
@@ -20,6 +20,7 @@ class EndScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view
+        menuButton.layer.cornerRadius = 5
         setLabels()
     }
     

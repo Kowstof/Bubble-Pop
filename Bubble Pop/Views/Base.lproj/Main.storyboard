@@ -424,6 +424,21 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eBR-NH-sZA">
                                 <rect key="frame" x="20" y="259" width="350" height="326"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CcE-MI-p8R">
+                                        <rect key="frame" x="75" y="276" width="200" height="50"/>
+                                        <color key="backgroundColor" red="0.68990832570000005" green="0.34183800219999999" blue="0.75299495459999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="9Yo-TE-e2a"/>
+                                            <constraint firstAttribute="height" constant="50" id="rUN-Wd-w0z"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
+                                        <state key="normal" title="Return to Menu">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="7Ek-Ba-u7F"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time's Up!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9VS-vc-im9">
                                         <rect key="frame" x="54" y="0.0" width="242" height="78"/>
                                         <fontDescription key="fontDescription" name="CarterOne" family="Carter One" pointSize="50"/>
@@ -436,40 +451,25 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THis will have the liong mesage that may ot may not span multiple lines wo yay thaty a;slodkfhjdfg" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEn-oy-1Ji">
-                                        <rect key="frame" x="25" y="126" width="300" height="100"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THis will have the liong mesage that may ot may not span multiple lines wo yay thaty a;slodkfhjdfg" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEn-oy-1Ji">
+                                        <rect key="frame" x="5" y="126" width="340" height="100"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="300" id="aYS-wZ-oGy"/>
                                             <constraint firstAttribute="height" constant="100" id="sVO-QW-0ZT"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CcE-MI-p8R">
-                                        <rect key="frame" x="75" y="276" width="200" height="50"/>
-                                        <color key="backgroundColor" red="0.68990832570000005" green="0.34183800219999999" blue="0.75299495459999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="9Yo-TE-e2a"/>
-                                            <constraint firstAttribute="height" constant="50" id="rUN-Wd-w0z"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
-                                        <state key="normal" title="Return to Menu">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="7Ek-Ba-u7F"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1529411765" green="0.68235294120000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="bGS-fF-hpP" firstAttribute="top" secondItem="9VS-vc-im9" secondAttribute="bottom" id="12l-E7-hJR"/>
+                                    <constraint firstAttribute="trailing" secondItem="qEn-oy-1Ji" secondAttribute="trailing" constant="5" id="7fC-CL-NY3"/>
                                     <constraint firstItem="bGS-fF-hpP" firstAttribute="centerX" secondItem="eBR-NH-sZA" secondAttribute="centerX" id="ADT-Ee-hCc"/>
                                     <constraint firstAttribute="bottom" secondItem="CcE-MI-p8R" secondAttribute="bottom" id="AT5-5C-lUR"/>
+                                    <constraint firstItem="qEn-oy-1Ji" firstAttribute="leading" secondItem="eBR-NH-sZA" secondAttribute="leading" constant="5" id="LDT-4w-Er2"/>
                                     <constraint firstAttribute="width" constant="350" id="XwY-tg-oRX"/>
                                     <constraint firstItem="9VS-vc-im9" firstAttribute="centerX" secondItem="eBR-NH-sZA" secondAttribute="centerX" id="aTS-sY-C63"/>
-                                    <constraint firstItem="qEn-oy-1Ji" firstAttribute="centerX" secondItem="eBR-NH-sZA" secondAttribute="centerX" id="dds-r4-CiR"/>
                                     <constraint firstItem="qEn-oy-1Ji" firstAttribute="top" secondItem="bGS-fF-hpP" secondAttribute="bottom" constant="15" id="iUS-Rs-cpA"/>
                                     <constraint firstItem="CcE-MI-p8R" firstAttribute="top" secondItem="qEn-oy-1Ji" secondAttribute="bottom" constant="50" id="r0Q-XJ-bXR"/>
                                     <constraint firstItem="CcE-MI-p8R" firstAttribute="centerX" secondItem="eBR-NH-sZA" secondAttribute="centerX" id="t3c-oi-8v4"/>

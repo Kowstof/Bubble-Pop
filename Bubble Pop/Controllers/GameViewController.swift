@@ -91,6 +91,7 @@ class GameViewController: UIViewController {
             newBubble.addTarget(self, action: #selector(bubbleTouched), for: .touchUpInside)
             self.view.addSubview(newBubble)
             bubbleCollection.append(newBubble)
+            newBubble.popInAnimation()
             return true
         } else {
             return false
@@ -144,6 +145,7 @@ class GameViewController: UIViewController {
     func removeBubble(bubble: Bubble) {
         let index = bubbleCollection.firstIndex(of: bubble)
         bubbleCollection.remove(at: index!)
+        bubble.popOutAnimation()
         bubble.removeFromSuperview()
     }
     

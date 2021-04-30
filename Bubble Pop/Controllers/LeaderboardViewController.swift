@@ -45,9 +45,4 @@ class LeaderboardViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Leaderboard"
     }
-    
-    //override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
-      //  <#code#>
-    //}
-    
 }

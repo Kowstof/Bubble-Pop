@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import CoreGraphics
 
 class Bubble: UIButton {
     
@@ -36,8 +35,23 @@ class Bubble: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func animation() {
+    // Animation source: https://en.proft.me/2020/05/12/how-create-popup-animation-swift/
+    
+    func popInAnimation() {
+        self.transform = CGAffineTransform(scaleX: 1.35, y: 1.35)
+        self.alpha = 0.0
         
+        UIView.animate(withDuration: 0.24) {
+            self.transform = CGAffineTransform.identity
+            self.alpha = 1.0
+        }
+    }
+    
+    func popOutAnimation() {
+        UIView.animate(withDuration: 0.24, animations: {
+            self.transform = CGAffineTransform(scaleX: 1.35, y: 1.35)
+            self.alpha = 0.0
+        })
     }
     
     func setColour() -> UIColor {
